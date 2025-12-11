@@ -1,0 +1,32 @@
+# Plant and controller parameters for the MC3113 line-follower digital twin.
+# This file is the single "source of truth" for geometry and dynamics.
+# Freeze this file for the cohort once the module starts.
+
+robot:
+  wheel_radius_m: 0.03         # Wheel radius r [m]
+  half_track_m: 0.08           # Half the track width b/2 [m] (wheelbase = 0.16 m)
+  mass_kg: 1.5                 # Approximate robot mass [kg]
+  inertia_kgm2: 0.05           # Approximate yaw inertia [kg·m^2]
+
+actuators:
+  v_max_mps: 0.60              # Max forward speed [m/s]
+  omega_max_radps: 2.0         # Max yaw rate [rad/s]
+  motor_time_constant_s: 0.15  # First-order motor time constant [s]
+  v_to_omega_gain: 8.0         # Mapping from normalized u to wheel speed [rad/s per 1.0]
+
+friction:
+  coulomb: 0.2                 # Simple Coulomb friction coefficient
+  viscous: 0.05                # Simple viscous friction coefficient
+
+sensors:
+  array_offsets_m: [-0.04, -0.02, 0.0, 0.02, 0.04]   # Sensor positions across track [m]
+  sample_rate_hz: 100           # Sensor sampling rate [Hz]
+  noise_std: 0.02               # Sensor noise std dev (normalized units)
+  saturation: [0.0, 1.0]        # Sensor output limits
+
+controller:
+  control_rate_hz: 100          # Controller update rate [Hz]
+  u_saturation: [-1.0, 1.0]     # Command saturation for u_L, u_R
+
+track:
+  finish_y_m: 2.5               # Example "finish line" y-position [m] (adjust as needed)

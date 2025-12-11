@@ -1,0 +1,31 @@
+# Scenario definitions for the line-follower digital twin.
+# S1: nominal, S2: obstacle, S3: fault + speed cap.
+
+S1:
+  description: "Nominal track, no obstacle, no fault"
+  duration_s: 90.0
+  obstacle:
+    enabled: false
+  fault:
+    enabled: false
+
+S2:
+  description: "Obstacle disturbance scenario"
+  duration_s: 120.0
+  obstacle:
+    enabled: true
+    spawn_time_s: 12.0
+    obstacle_length_m: 0.25
+  fault:
+    enabled: false
+
+S3:
+  description: "Sensor dropout + speed cap scenario"
+  duration_s: 150.0
+  obstacle:
+    enabled: false
+  fault:
+    enabled: true
+    dropout_start_s: 20.0
+    dropout_end_s: 30.0
+    speed_cap_mps: 0.45

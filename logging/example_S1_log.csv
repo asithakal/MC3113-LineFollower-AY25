@@ -1,0 +1,4 @@
+run_id,scenario_id,t,x,y,theta,v,omega,e_line,line_loss_flag,sensor_1,sensor_2,sensor_3,sensor_4,sensor_5,obstacle_flag,fault_flag,u_L,u_R,sat_flag_L,sat_flag_R,safety_violation,notes
+MC3113_AY25_Team01_S1_001,S1,0.00,0.00,0.00,0.00,0.00,0.00,0.000,0,0.10,0.20,0.80,0.20,0.10,0,0,0.00,0.00,0,0,0,"start"
+MC3113_AY25_Team01_S1_001,S1,0.01,0.00,0.00,0.00,0.05,0.10,0.001,0,0.10,0.20,0.80,0.20,0.10,0,0,0.10,0.20,0,0,0,""
+MC3113_AY25_Team01_S1_001,S1,0.02,0.00,0.00,0.00,0.10,0.15,0.002,0,0.10,0.20,0.80,0.20,0.10,0,0,0.10,0.20,0,0,0,"..."
