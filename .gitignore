@@ -1,0 +1,22 @@
+# OS-specific
+Thumbs.db
+Desktop.ini
+
+# MATLAB autosave and backups
+*.asv
+*.slxc
+*.slx.autosave
+*.autosave
+
+# Logs, output data, temp
+*.log
+*.tmp
+*.bak
+*.mat
+logs/
+output/
+
+# IDE/project files (optional)
+*.code-workspace
+.vscode/
+.idea/
