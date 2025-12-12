@@ -191,9 +191,8 @@ This folder contains complete solutions including working controller code.
 ---
 
 _For instructor use only. MC3113 AY2025/26._
-```
 
-***
+
 
 ## Git Commands to Add These READMEs
 
@@ -216,3 +215,4 @@ git commit -m "Add comprehensive README files for instructor demo branch"
 
 # Push to remote
 git push origin demo-instructor-complete
+```
