@@ -25,4 +25,7 @@ output/
 demo-solution/
 **/instructor_controller.m
 **/Demo_*_final.csv
-**/Demo_metrics_summary.json
+**/Demo_metrics_summary.json"demo-solution/" 
+"Demo_*.csv" 
+"Demo_*.json" 
+"scripts/run_scenario_hifi.m"   # Block hifi from main
