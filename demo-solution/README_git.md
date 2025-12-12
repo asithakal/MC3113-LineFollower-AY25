@@ -16,3 +16,5 @@ git commit -m "Update ICD documentation"
 git push origin main          # Update your private copy
 git push student main         # Update student copy
 ```
+
+Then you're ready! When Lecture 3 comes, you just share the link: `https://github.com/yourusername/MC3113-LineFollower-AY25.git`
