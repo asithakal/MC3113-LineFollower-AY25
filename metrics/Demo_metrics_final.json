@@ -1,0 +1,38 @@
+{
+  "S1": {
+    "run_id": "Demo_S1_final",
+    "scenario": "S1",
+    "t_final": 89.99,
+    "finished": true,
+    "IAE": 20.149591999999995,
+    "energy_proxy": 88.389414000003782,
+    "line_loss_events": 0,
+    "obstacle_contacts": 0,
+    "max_v_fault": null,
+    "speed_cap_ok": true
+  },
+  "S2": {
+    "run_id": "Demo_S2_final",
+    "scenario": "S2",
+    "t_final": 119.99,
+    "finished": true,
+    "IAE": 56.572890000000037,
+    "energy_proxy": 184.8220059999999,
+    "line_loss_events": 3759,
+    "obstacle_contacts": 0,
+    "max_v_fault": null,
+    "speed_cap_ok": true
+  },
+  "S3": {
+    "run_id": "Demo_S3_final",
+    "scenario": "S3",
+    "t_final": 149.99,
+    "finished": true,
+    "IAE": 57.212032999999977,
+    "energy_proxy": 199.78771399999954,
+    "line_loss_events": 1150,
+    "obstacle_contacts": 0,
+    "max_v_fault": 0.3091,
+    "speed_cap_ok": true
+  }
+}
