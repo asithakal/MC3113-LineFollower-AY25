@@ -46,7 +46,8 @@ function compare_branches()
     demo_only = {
         'demo-solution/instructor_controller.m'
         'demo-solution/InstructorGuide.md'
-        'plotting/plot_metrics_comparison.m'
+        % 'plotting/plot_metrics_comparison.m'
+        % NOTE: plotting/ is intentionally available on both branches
     };
     
     for i = 1:length(demo_only)

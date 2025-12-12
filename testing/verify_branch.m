@@ -52,7 +52,8 @@ function results = verify_branch()
     fprintf('\n[2/10] Checking directory structure...\n');
     
     common_dirs = {'src', 'scripts', 'config', 'interfaces', 'logging', 'metrics', 'docs'};
-    demo_only_dirs = {'demo-solution', 'plotting'};
+    % demo_only_dirs = {'demo-solution', 'plotting'};
+    demo_only_dirs = {'demo-solution'};  % plotting is shared with students
     
     % Check common directories
     for i = 1:length(common_dirs)
