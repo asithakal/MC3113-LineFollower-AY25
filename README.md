@@ -62,6 +62,7 @@ git checkout demo-instructor-complete
 ```
 % In MATLAB
 cd 'D:\path\to\mc3113-line-follower-demo'
+# addpath(genpath(pwd));
 addpath('src', 'scripts', 'metrics', 'demo-solution');
 
 % Run all three scenarios
