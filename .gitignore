@@ -20,3 +20,9 @@ output/
 *.code-workspace
 .vscode/
 .idea/
+
+# Instructor demo solution - never commit to main
+# demo-solution/
+# **/instructor_controller.m
+# **/Demo_*_final.csv
+# **/Demo_metrics_summary.json
