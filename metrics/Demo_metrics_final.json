@@ -4,8 +4,8 @@
     "scenario": "S1",
     "t_final": 89.99,
     "finished": true,
-    "IAE": 20.149591999999995,
-    "energy_proxy": 88.389414000003782,
+    "IAE": 2.0212020000000019,
+    "energy_proxy": 75.5797139999994,
     "line_loss_events": 0,
     "obstacle_contacts": 0,
     "max_v_fault": null,
@@ -16,10 +16,10 @@
     "scenario": "S2",
     "t_final": 119.99,
     "finished": true,
-    "IAE": 56.572890000000037,
-    "energy_proxy": 184.8220059999999,
-    "line_loss_events": 3759,
-    "obstacle_contacts": 0,
+    "IAE": 72.616887999999946,
+    "energy_proxy": 80.377408999995083,
+    "line_loss_events": 10010,
+    "obstacle_contacts": 12,
     "max_v_fault": null,
     "speed_cap_ok": true
   },
@@ -28,11 +28,17 @@
     "scenario": "S3",
     "t_final": 149.99,
     "finished": true,
-    "IAE": 57.212032999999977,
-    "energy_proxy": 199.78771399999954,
-    "line_loss_events": 1150,
+    "IAE": 3.6766119999999991,
+    "energy_proxy": 125.73791400000781,
+    "line_loss_events": 0,
     "obstacle_contacts": 0,
-    "max_v_fault": 0.3091,
+    "max_v_fault": 0.3076,
     "speed_cap_ok": true
+  },
+  "metadata": {
+    "fidelity_level": "realistic",
+    "controller_version": "tuned",
+    "controller_name": "PID (Tuned)",
+    "timestamp": "2025-12-13 13:42:23"
   }
 }
