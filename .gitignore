@@ -42,3 +42,11 @@ slprj/
 "logging/Test_*.csv" 
 "logging/Final_*.csv" 
 "demo-materials/" 
+ 
+# Debug and temporary test files 
+controller_debug.txt 
+obstacle_debug.txt 
+logging/Debug_*.csv 
+logging/Test_*.csv 
+logging/Final_*.csv 
+demo-materials/ 
