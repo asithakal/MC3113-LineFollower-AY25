@@ -33,6 +33,25 @@ Use this to:
 - `models/plant_model.slx` - Complete Simulink plant (if available)
 - `scripts/run_all_scenarios_demo.m` - Batch runner
 
+## Controller Versions
+
+### Untuned (instructor_controller_untuned.m)
+- Simple P control, Kp = -1.0
+- Use for Week 3 demo to show poor performance
+- IAE ≈ 20 m·s, fails requirements
+- **Teaching value:** Shows why tuning matters
+
+### Tuned (instructor_controller.m)
+- Full PID with adaptive speed
+- Kp = -3.0, Ki = -0.5, Kd = -0.8
+- IAE ≈ 0.5-2.0 m·s, much better
+- **Teaching value:** Shows proper design
+
+### Demo Script
+Week 3: Show untuned first, then tuned version
+Week 11: Students present their tuned versions
+
+
 ### Evidence
 - `logs/Demo_S1_final.csv` - S1 nominal run
 - `logs/Demo_S2_final.csv` - S2 obstacle run

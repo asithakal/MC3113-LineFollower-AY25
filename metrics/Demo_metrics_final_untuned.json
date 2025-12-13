@@ -1,0 +1,44 @@
+{
+  "S1": {
+    "run_id": "Demo_S1_final_untuned",
+    "scenario": "S1",
+    "t_final": 89.99,
+    "finished": true,
+    "IAE": 24.372677000000003,
+    "energy_proxy": 93.396854000002875,
+    "line_loss_events": 0,
+    "obstacle_contacts": 0,
+    "max_v_fault": null,
+    "speed_cap_ok": true
+  },
+  "S2": {
+    "run_id": "Demo_S2_final_untuned",
+    "scenario": "S2",
+    "t_final": 119.99,
+    "finished": true,
+    "IAE": 56.984438999999973,
+    "energy_proxy": 186.74894099999977,
+    "line_loss_events": 3223,
+    "obstacle_contacts": 0,
+    "max_v_fault": null,
+    "speed_cap_ok": true
+  },
+  "S3": {
+    "run_id": "Demo_S3_final_untuned",
+    "scenario": "S3",
+    "t_final": 149.99,
+    "finished": true,
+    "IAE": 57.212032999999977,
+    "energy_proxy": 199.78771399999954,
+    "line_loss_events": 1150,
+    "obstacle_contacts": 0,
+    "max_v_fault": 0.3091,
+    "speed_cap_ok": true
+  },
+  "metadata": {
+    "fidelity_level": "realistic",
+    "controller_version": "untuned",
+    "controller_name": "Simple P (Untuned)",
+    "timestamp": "2025-12-13 09:47:18"
+  }
+}
