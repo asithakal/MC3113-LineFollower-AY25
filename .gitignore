@@ -1,31 +1,44 @@
-# OS-specific
-Thumbs.db
-Desktop.ini
+# MC3113 Line-Follower Demo - .gitignore (demo-instructor-complete branch)
 
-# MATLAB autosave and backups
+# MATLAB
 *.asv
-*.slxc
-*.slx.autosave
+*.m~
 *.autosave
 
-# Logs, output data, temp
-*.log
-*.tmp
-*.bak
-*.mat
-logs/
-output/
+# Logs (keep structure, ignore generated logs except Demo_*_final.csv)
+logging/test_*.csv
+logging/temp_*.csv
+logging/QuickTest_*.csv
 
-# IDE/project files (optional)
-*.code-workspace
+# Metrics temp files
+metrics/temp_*.json
+metrics/test_*.json
+
+# Plots temp files
+plots/test_*.png
+plots/temp_*.png
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# Instructor demo solution - never commit to main
-demo-solution/
-**/instructor_controller.m
-**/Demo_*_final.csv
-**/Demo_metrics_summary.json"demo-solution/" 
-"Demo_*.csv" 
-"Demo_*.json" 
-"scripts/run_scenario_hifi.m"   # Block hifi from main
+# Simulink
+*.slxc
+slprj/
+
+# Note: demo-solution/ is NOT ignored on this branch (it should be tracked)
+"" 
+"# Debug and test files" 
+"controller_debug.txt" 
+"obstacle_debug.txt" 
+"logging/Debug_*.csv" 
+"logging/Test_*.csv" 
+"logging/Final_*.csv" 
+"demo-materials/" 

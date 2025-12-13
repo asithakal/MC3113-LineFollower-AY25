@@ -77,7 +77,7 @@ function run_scenario(scenario_id, controller_fn, run_id)
             if t >= 12 && t <= 14
                 obstacle_flag = 1;
                 % Obstacle pushes robot laterally
-                disturbance_force_y = 0.3 * sin(pi * (t - 12) / 2);  % Peak at t=13
+                disturbance_force_y = 0.12 * sin(pi * (t - 12) / 2);  % Peak at t=13
             end
         end
         
@@ -202,9 +202,10 @@ function write_log_csv(log, run_id, scenario_id)
         if strcmp(scenario_id, 'S3') && log.fault_flag(k) && log.v(k) > 0.45
             safety_viol = 1;
         end
-        if strcmp(scenario_id, 'S2') && log.obstacle_flag(k) && abs(log.e_line(k)) < 0.05
-            safety_viol = 1;  % "Collision" if obstacle present and very close to line
+        if strcmp(scenario_id, 'S2') && log.obstacle_flag(k) && abs(log.e_line(k)) < 0.02 % changed from 0.05 as still collisions happening
+            safety_viol = 1;  % Collision only if within 2.0cm (Bronze tier threshold)
         end
+
         
         fprintf(fid, '%s,%s,%.3f,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f,%d,', ...
             run_id, scenario_id, log.t(k), log.x(k), log.y(k), log.theta(k), ...

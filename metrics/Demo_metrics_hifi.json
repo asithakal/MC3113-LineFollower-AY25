@@ -1,0 +1,38 @@
+{
+  "S1": {
+    "run_id": "Demo_S1_hifi",
+    "scenario": "S1",
+    "t_final": 89.99,
+    "finished": true,
+    "IAE": 61.515313000000006,
+    "energy_proxy": 157.35889699999998,
+    "line_loss_events": 6221,
+    "obstacle_contacts": 0,
+    "max_v_fault": null,
+    "speed_cap_ok": true
+  },
+  "S2": {
+    "run_id": "Demo_S2_hifi",
+    "scenario": "S2",
+    "t_final": 119.99,
+    "finished": true,
+    "IAE": 165.01614900000024,
+    "energy_proxy": 226.25397900000002,
+    "line_loss_events": 10599,
+    "obstacle_contacts": 0,
+    "max_v_fault": null,
+    "speed_cap_ok": true
+  },
+  "S3": {
+    "run_id": "Demo_S3_hifi",
+    "scenario": "S3",
+    "t_final": 149.99,
+    "finished": true,
+    "IAE": 92.908896000000055,
+    "energy_proxy": 268.603787,
+    "line_loss_events": 10651,
+    "obstacle_contacts": 0,
+    "max_v_fault": 0.2856,
+    "speed_cap_ok": true
+  }
+}

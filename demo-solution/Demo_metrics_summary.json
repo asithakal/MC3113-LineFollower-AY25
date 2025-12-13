@@ -1,0 +1,35 @@
+{
+  "S1": {
+    "run_id": "Demo_S1_final",
+    "scenario": "S1",
+    "t_final": 72.3,
+    "IAE": 0.021,
+    "energy_proxy": 54.2,
+    "line_loss_events": 0,
+    "obstacle_contacts": 0,
+    "max_v_fault": NaN,
+    "speed_cap_ok": true
+  },
+  "S2": {
+    "run_id": "Demo_S2_final",
+    "scenario": "S2",
+    "t_final": 95.7,
+    "IAE": 0.034,
+    "energy_proxy": 68.5,
+    "line_loss_events": 0,
+    "obstacle_contacts": 0,
+    "max_v_fault": NaN,
+    "speed_cap_ok": true
+  },
+  "S3": {
+    "run_id": "Demo_S3_final",
+    "scenario": "S3",
+    "t_final": 118.4,
+    "IAE": 0.052,
+    "energy_proxy": 71.3,
+    "line_loss_events": 0,
+    "obstacle_contacts": 0,
+    "max_v_fault": 0.44,
+    "speed_cap_ok": true
+  }
+}
