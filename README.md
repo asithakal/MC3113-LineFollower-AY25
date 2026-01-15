@@ -1,32 +1,19 @@
-# MC3113 Line-Follower Demo - Complete Instructor Solution
+# MC3113 Line-Follower Demo - Complete Student Solution
 
 **Branch:** `demo-instructor-complete`  
 **Repository:** https://github.com/asithakal/mc3113-line-follower-demo  
-**Status:** 🔒 PRIVATE - Instructor Only  
+**Status:** 🔒 PUBLIC - Student-facing version  
 **Version:** AY25.1
 
 ---
 
-## ⚠️ IMPORTANT: This is the INSTRUCTOR SOLUTION branch
-
-**DO NOT:**
-- ❌ Share this branch with students
-- ❌ Make this branch public
-- ❌ Push this to any public repository
-- ❌ Include solution files in student handouts
-- ❌ Show controller code before PDR
-
-**DO:**
-- ✅ Use for live demonstrations in lectures
-- ✅ Use as rubric calibration for marking
-- ✅ Show plots, metrics, and documentation only
-- ✅ Keep on private branches only
+## ⚠️ IMPORTANT: This is the STUDENT branch
 
 ---
 
 ## What's in this branch
 
-This branch contains a **complete, worked solution** for the MC3113 line-follower project, demonstrating the full MBSE workflow:
+This branch contains a **sample solution** for the MC3113 line-follower project, demonstrating the full MBSE workflow:
 
 ```
 LineFollowerDemo/
@@ -166,7 +153,7 @@ See `demo-solution/RTM_Complete.csv` for full matrix.
 
 ## Student Branch
 
-**Students use:** [`main` branch](https://github.com/asithakal/mc3113-line-follower-demo)
+**Students use:** [`main` branch](https://github.com/asithakal/mc3113-LineFollower-AY25)
 
 The main branch contains:
 - Skeleton templates
@@ -236,7 +223,7 @@ Before each semester:
 
 ---
 
-**Last Updated:** December 2025  
+**Last Updated:** January 2025  
 **For:** AY2025/26 Teaching
 
 ---
