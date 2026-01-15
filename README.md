@@ -1,7 +1,7 @@
 # MC3113 Line-Follower Demo - Complete Student Solution
 
 **Branch:** `demo-instructor-complete`  
-**Repository:** https://github.com/asithakal/mc3113-line-follower-demo  
+**Repository:** https://github.com/asithakal/MC3113-LineFollower-AY25  
 **Status:** 🔒 PUBLIC - Student-facing version  
 **Version:** AY25.1
 
