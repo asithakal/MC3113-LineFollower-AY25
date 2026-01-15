@@ -125,6 +125,15 @@
             background: #1e293b;
             border-radius: 8px;
         }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background: #0f172a;
+            color: #e2e8f0;
+            border: 1px solid #475569;
+            border-radius: 4px;
+            font-family: inherit;
+        }
         .score-legend {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -192,9 +201,9 @@
                     <td>-</td>
                     <td id="totalA" class="datum">0</td>
                     <td id="totalB">-</td>
-                    <td></td>
+                    <td id="weightedB">-</td>
                     <td id="totalC">-</td>
-                    <td></td>
+                    <td id="weightedC">-</td>
                 </tr>
             </tfoot>
         </table>
@@ -220,37 +229,38 @@
 
     <script>
         let criteria = [
-            {name: 'Cost', weight: 1.0},
-            {name: 'Precision/Control', weight: 1.5},
-            {name: 'Weight', weight: 1.0},
-            {name: 'Power Efficiency (ISO 50001)', weight: 2.0},
-            {name: 'Ease of Assembly (DfA)', weight: 1.0},
-            {name: 'Safety (DfS, ISO 13849)', weight: 1.5},
-            {name: 'Environmental Impact (LCA/DfE)', weight: 1.0}
+            {name: 'Cost', weight: 1.0, scoreB: 0, scoreC: 0},
+            {name: 'Precision/Control', weight: 1.5, scoreB: 0, scoreC: 0},
+            {name: 'Weight', weight: 1.0, scoreB: 0, scoreC: 0},
+            {name: 'Power Efficiency (ISO 50001)', weight: 2.0, scoreB: 0, scoreC: 0},
+            {name: 'Ease of Assembly (DfA)', weight: 1.0, scoreB: 0, scoreC: 0},
+            {name: 'Safety (DfS, ISO 13849)', weight: 1.5, scoreB: 0, scoreC: 0},
+            {name: 'Environmental Impact (LCA/DfE)', weight: 1.0, scoreB: 0, scoreC: 0}
         ];
 
         function initTable() {
             const tbody = document.getElementById('criteriaBody');
             tbody.innerHTML = '';
             criteria.forEach((crit, index) => {
-                addCriterionRow(crit, index);
+                addCriterionRow(index);
             });
             calculateTotals();
         }
 
-        function addCriterionRow(crit, index) {
+        function addCriterionRow(index) {
             const tbody = document.getElementById('criteriaBody');
             const row = document.createElement('tr');
+            const crit = criteria[index];
             row.innerHTML = `
-                <td><input type="text" value="${crit.name}" onchange="updateCriterion(${criteria.length}, 'name', this.value)"></td>
-                <td><input type="number" step="0.1" min="0" value="${crit.weight}" onchange="updateCriterion(${criteria.length}, 'weight', parseFloat(this.value))"></td>
+                <td><input type="text" value="${crit.name}" onchange="updateCriterion(${index}, 'name', this.value)"></td>
+                <td><input type="number" step="0.1" min="0" value="${crit.weight}" onchange="updateCriterion(${index}, 'weight', parseFloat(this.value))"></td>
                 <td class="datum">0</td>
-                <td class="score" onclick="setScore(${criteria.length}, 'B', getNextScore(this))" data-score="0">${crit.scoreB || 0}</td>
-                <td class="score" onclick="setScore(${criteria.length}, 'C', getNextScore(this))" data-score="0">${crit.scoreC || 0}</td>
-                <td colspan="2"></td>
+                <td class="score" onclick="setScore(${index}, 'B')" data-score="${crit.scoreB || 0}">${crit.scoreB || 0}</td>
+                <td id="weightedB${index}">0.0</td>
+                <td class="score" onclick="setScore(${index}, 'C')" data-score="${crit.scoreC || 0}">${crit.scoreC || 0}</td>
+                <td id="weightedC${index}">0.0</td>
             `;
             tbody.appendChild(row);
-            criteria.push({name: crit.name || 'New Criterion', weight: crit.weight || 1.0, scoreB: 0, scoreC: 0});
         }
 
         function updateCriterion(index, prop, value) {
@@ -258,41 +268,51 @@
             calculateTotals();
         }
 
-        function setScore(index, concept, newScore) {
-            criteria[index][`score${concept}`] = newScore;
+        function setScore(index, concept) {
             const cell = event.target;
+            const current = parseInt(cell.dataset.score || 0);
+            const newScore = (current + 1 > 2 ? -2 : current + 1);
+            
+            criteria[index][`score${concept}`] = newScore;
             cell.textContent = newScore;
             cell.className = newScore < 0 ? 'score negative' : newScore > 0 ? 'score positive' : 'score zero';
             cell.dataset.score = newScore;
             calculateTotals();
         }
 
-        function getNextScore(cell) {
-            const current = parseInt(cell.dataset.score || 0);
-            return (current + 1 > 2 ? -2 : current + 1);
-        }
-
         function calculateTotals() {
-            let totalA = 0, totalB = 0, totalC = 0;
-            criteria.forEach(crit => {
+            let totalB = 0, totalC = 0;
+            criteria.forEach((crit, index) => {
                 const w = crit.weight || 0;
-                totalB += (crit.scoreB || 0) * w;
-                totalC += (crit.scoreC || 0) * w;
+                const weightedB = (crit.scoreB || 0) * w;
+                const weightedC = (crit.scoreC || 0) * w;
+                totalB += weightedB;
+                totalC += weightedC;
+                
+                const wbCell = document.getElementById(`weightedB${index}`);
+                const wcCell = document.getElementById(`weightedC${index}`);
+                if (wbCell) wbCell.textContent = weightedB.toFixed(1);
+                if (wcCell) wcCell.textContent = weightedC.toFixed(1);
             });
+            
             document.getElementById('totalB').textContent = totalB.toFixed(1);
             document.getElementById('totalC').textContent = totalC.toFixed(1);
 
-            // Highlight winner
-            const cells = document.querySelectorAll('#totalB, #totalC');
-            cells.forEach(cell => cell.classList.remove('winner'));
+            const cellB = document.getElementById('totalB');
+            const cellC = document.getElementById('totalC');
+            cellB.classList.remove('winner');
+            cellC.classList.remove('winner');
+            
             if (Math.abs(totalB - totalC) > 2) {
-                if (totalB > totalC) document.getElementById('totalB').classList.add('winner');
-                else document.getElementById('totalC').classList.add('winner');
+                if (totalB > totalC) cellB.classList.add('winner');
+                else cellC.classList.add('winner');
             }
         }
 
         function addCriterion() {
-            addCriterionRow({name: 'New Criterion', weight: 1.0, scoreB: 0, scoreC: 0});
+            criteria.push({name: 'New Criterion', weight: 1.0, scoreB: 0, scoreC: 0});
+            const newIndex = criteria.length - 1;
+            addCriterionRow(newIndex);
             calculateTotals();
         }
 
@@ -309,6 +329,9 @@
             // Update concept names in table header if needed
         }
 
+        // Set today's date
+        document.getElementById('date').valueAsDate = new Date();
+        
         initTable();
     </script>
 </body>
