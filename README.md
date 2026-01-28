@@ -75,6 +75,15 @@ Open `src/my_controller_step.m` and implement your control logic.
 
 ---
 
+## 📚 Documentation
+
+- **[Performance Tier Guide](docs/Performance-Tier-Guide.md)** - Understand performance expectations and development pathway
+- **[Quick Start Guide](docs/Student_Quick_Start.md)** - Get started in 5 minutes
+- **[Demo Steps](docs/DemoSteps.md)** - Step-by-step tutorial
+- **[Project Brief](docs/Line-Follower-Project-Brief.md)** - Full requirements and specifications
+
+---
+
 ## 🧪 Running Scenarios
 
 ### Scenario S1: Basic Line Following
