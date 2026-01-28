@@ -1,11 +1,21 @@
-# MC3113 Line-Follower Demo - .gitignore (demo-instructor-complete branch)
+# MC3113 Line-Follower Demo - .gitignore (student branch)
 
 # MATLAB
 *.asv
 *.m~
 *.autosave
 
+# Remove Instructor-only content
+demo-solution/
+*instructor*.m
+*solution*.m
+*complete*.m
+InstructorGuide.*
+Demo_metrics_summary.json
+
 # Logs (keep structure, ignore generated logs except Demo_*_final.csv)
+!logging/README.md
+logging/*.csv
 logging/test_*.csv
 logging/temp_*.csv
 logging/QuickTest_*.csv
@@ -17,6 +27,11 @@ metrics/test_*.json
 # Plots temp files
 plots/test_*.png
 plots/temp_*.png
+
+# Generated plots
+plots/*.png
+plots/*.jpg
+!plots/README.md
 
 # OS files
 .DS_Store
@@ -32,6 +47,12 @@ desktop.ini
 # Simulink
 *.slxc
 slprj/
+
+# Student working files
+*_backup.m
+*_old.m
+scratch/
+temp/
 
 # Note: demo-solution/ is NOT ignored on this branch (it should be tracked)
 "" 
