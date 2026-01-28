@@ -54,16 +54,6 @@ slprj/
 scratch/
 temp/
 
-# Note: demo-solution/ is NOT ignored on this branch (it should be tracked)
-"" 
-"# Debug and test files" 
-"controller_debug.txt" 
-"obstacle_debug.txt" 
-"logging/Debug_*.csv" 
-"logging/Test_*.csv" 
-"logging/Final_*.csv" 
-"demo-materials/" 
- 
 # Debug and temporary test files 
 controller_debug.txt 
 obstacle_debug.txt 
