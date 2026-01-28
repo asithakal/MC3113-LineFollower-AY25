@@ -1,8 +1,0 @@
-ReqID,Requirement Short,Acceptance Criteria,TestID,Method,Scenario,Evidence File,Status,Notes
-R-TRACK-01,Line following in S1,|e_line| ≤ 0.15m for 95% of run,T-S1-TRACK,S/T,S1,Demo_S1_final.csv,PASS,Max deviation 0.12m
-R-TIME-01,Complete S1 ≤ 75s,t_final ≤ 75.0s,T-S1-TIME,A/S,S1,Demo_metrics_summary.json,PASS,Actual: 72.3s
-R-IAE-01,IAE ≤ 0.025 m·s in S1,IAE ≤ 0.025,T-S1-IAE,A/S,S1,Demo_metrics_summary.json,PASS,Actual: 0.021 m·s
-R-ENERGY-01,Energy proxy ≤ 60 units,Energy_proxy ≤ 60,T-S1-ENERGY,A/S,S1,Demo_metrics_summary.json,PASS,Actual: 54.2 units
-R-OBS-01,Zero obstacle contact,obstacle_contacts = 0,T-S2-OBS,S/T,S2,Demo_S2_final.csv,PASS,No collisions detected
-R-FAULT-01,No line loss in S3,line_loss_events = 0,T-S3-FAULT,S/T,S3,Demo_S3_final.csv,PASS,Maintained control
-R-CAP-01,Speed cap v ≤ 0.45 m/s,max_v_fault ≤ 0.45,T-S3-CAP,T,S3,Demo_S3_final.csv; Demo_v_speedcap.png,PASS,Max during fault: 0.44 m/s
