@@ -27,6 +27,7 @@ This repository provides the **simulation framework** for the MC3113 Line-Follow
 ```
 MC3113-LineFollower-AY25/
 ├── README.md                    ← This file
+├── LICENSE                      ← MIT License with Academic Integrity Notice
 ├── docs/                        ← Project documentation
 │   ├── Line-Follower-Project-Brief.md
 │   └── Student_Quick_Start.md
@@ -158,6 +159,14 @@ Your controller must meet these requirements (see Project Brief for details):
 - **Week 6:** First simulation demonstration
 - **Week 9:** Preliminary Design Review (PDR)
 - **Week 12:** Critical Design Review (CDR)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License with Academic Integrity Notice - see the [LICENSE](LICENSE) file for details.
+
+**Note for Students:** While this code is open source, your controller implementation must be your own original work. Sharing solutions with other students violates academic integrity policies and will result in disciplinary action.
 
 ---
 
