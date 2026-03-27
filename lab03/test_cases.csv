@@ -1,0 +1,4 @@
+test_id,req_id,description,run_id,metric,operator,threshold
+TC-01,R-RESP-01,Step 60C rise time,1,rise_time_10_90,<=,30.0
+TC-02,R-SS-01,Steady-state error at 60C,1,ss_error_last20s,<=,1.0
+TC-03,R-SAFE-01,Heater limit above 85C,3,max_heater_above_85,<=,0.80
